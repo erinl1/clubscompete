@@ -11,6 +11,8 @@
   href="https://fonts.googleapis.com/css?family=Muli">
   <link rel="stylesheet" type="text/css"
   href="https://fonts.googleapis.com/css?family=Vollkorn">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <%= csrf_meta_tags %>
     <%= filestack_js_include_tag %>
     <%= filestack_js_init_tag %>
@@ -20,7 +22,19 @@
 <center>
   <body>
     <div class = 'container'>
+      <div class = 'row'>
+      <div class = 'col-md-9' style="text-align: left">
       <%= yield %>
+      </div>
+      <div class="col-md-3" style="width:20px, margin-right: 0px, margin-top: 0px, text-align: right">
+        <h2 class="w3-bar-item">Events</h2>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a><br>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a><br>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a><br>
+      </div>
+
+<!-- Page Content -->
+    </div>
     </div>
   </body>
 </center>
