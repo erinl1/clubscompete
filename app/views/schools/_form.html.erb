@@ -24,4 +24,7 @@
   <div>
     <%= form.filestack_field :image_url, 'Upload Your School Picture!',  pickerOptions: {'fromSources': ["local_file_system","url","imagesearch","facebook","instagram","googledrive","dropbox","evernote"]}, id: 'school_picture_addition' %>
   </div>
+  <div class="actions">
+    <%= form.submit 'submit', class: 'btn-primary btn' %>
+  </div>
 <% end %>
