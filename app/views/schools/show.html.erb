@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @school.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @school.location %>
+</p>
+
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>
+
+<h1>Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Name</th>
+      <th>Grade level</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @school.teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.name %></td>
+        <td><%= team.grade_level %></td>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Team', new_team_path %>
+<%= link_to 'View Schools', schools_path %>
