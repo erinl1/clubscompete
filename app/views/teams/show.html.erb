@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>School:</strong>
-  <%= @team.school.name %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @team.name %>
 </p>
 
 <p>
-  <strong>Grade level:</strong>
-  <%= @team.grade_level %>
+  <strong>School:</strong>
+  <%= @team.school %>
 </p>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
