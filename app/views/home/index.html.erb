@@ -1,5 +1,10 @@
-<% if current_user.nil? %>
-	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to('Edit registration', edit_user_registration_path, class: 'btn btn-primary') %><br>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'btn btn-primary') %>
+
 <% else %>
-	<%= link_to app_dashboard_index_path, class: 'login-button' do %>Go to App<% end %>
+
+  <%= link_to('Register', new_user_registration_path, class: 'btn btn-primary')  %><br>
+  <%= link_to('Login', new_user_session_path, class: 'btn btn-primary')  %>
 <% end %>
