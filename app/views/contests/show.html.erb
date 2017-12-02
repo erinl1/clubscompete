@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contest.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @contest.date %>
+</p>
+
+<p>
+  <strong>Number of problems:</strong>
+  <%= @contest.number_of_problems %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @contest.img_url %>
+</p>
+
+<%= link_to 'Edit', edit_contest_path(@contest) %> |
+<%= link_to 'Back', contests_path %>
