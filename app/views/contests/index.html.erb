@@ -2,7 +2,7 @@
 
 <h1>Contests</h1>
 
-<table>
+<table class = 'table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -16,11 +16,9 @@
   <tbody>
     <% @contests.each do |contest| %>
       <tr>
-        <td><%= contest.name %></td>
+        <td><%= link_to contest.name, contest %></td>
         <td><%= contest.date %></td>
         <td><%= contest.number_of_problems %></td>
-        <td><%= contest.img_url %></td>
-        <td><%= link_to 'Show', contest %></td>
         <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
         <td><%= link_to 'Destroy', contest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
