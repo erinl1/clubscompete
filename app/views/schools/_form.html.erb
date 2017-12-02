@@ -11,18 +11,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :school_name %>
+    <%= form.text_field :name, id: :school_name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group  ">
     <%= form.label :location %>
-    <%= form.text_field :location, id: :school_location %>
+    <%= form.text_field :location, id: :school_location, class: 'form-control' %>
   </div>
   <div>
-    <%= form.filestack_field :image_url, 'Upload Your School Picture!',  pickerOptions: {'fromSources': ["local_file_system","url","imagesearch","facebook","instagram","googledrive","dropbox","evernote"]}, id: 'school_picture_addition' %>
+    <%= form.filestack_field :image_url, 'Upload Your School Picture!',  pickerOptions: {'fromSources': ["local_file_system","url","imagesearch","facebook","instagram","googledrive","dropbox","evernote"]}, id: 'school_picture_addition', class: 'btn' %>
   </div>
   <div class="actions">
     <%= form.submit 'submit', class: 'btn-primary btn' %>
