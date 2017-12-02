@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+  school = School.create([{ name: 'Stuyvesant' }, { address :'345 Chambers Street' }])
 #   Character.create(name: 'Luke', movie: movies.first)
